@@ -1,5 +1,5 @@
 // typing animation
-const typed = new Typed('.typing',{
+const typed = new Typed('.typing', {
     strings: ['Fronted Developer', 'Designer', 'Youtuber'],
     typeSpeed: 100,
     backSpeed: 100,
@@ -11,17 +11,17 @@ const typed = new Typed('.typing',{
 let telegram_bot_id = "6547759004:AAEFuEK4EGdJtcGE5CdTvDdM63zX5QYMghI";
 // https://api.telegram.org/bot6200957174:AAFI8PcmEbAkIiGbrcMp-a6_Ngci2muR8r8/getupdates
 let chat_id = 1713463627;
-let name, email, subject, message;
-let ready = function() {
-    name = document.getElementById("name").value;
-    email = document.getElementById("email").value;
-    subject = document.getElementById("subject").value;
-    message = document.getElementById("message").value;
-    message = "Name: " + name + "\nEmail: " + email + "\nSubject: " + subject + "\nMessage: " + message;
-};
+
 function hasanjon() {
     event.preventDefault();
-    ready();
+    let username, email, subject, message;
+
+    username = document.getElementById("username");
+    console.log(username);
+    email = document.getElementById("email");
+    subject = document.getElementById("subject");
+    message = document.getElementById("message");
+    message = "username: " + username.value + "\nEmail: " + email.value + "\nSubject: " + subject.value + "\nMessage: " + message.value;
     let settings = {
         "async": true,
         "crossDomain": true,
@@ -39,7 +39,7 @@ function hasanjon() {
     $.ajax(settings).done(function (response) {
         console.log(response);
     });
-    document.getElementById("name").value = "";
+    document.getElementById("username").value = "";
     document.getElementById("email").value = "";
     document.getElementById("subject").value = "";
     document.getElementById("message").value = "";
