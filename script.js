@@ -31,7 +31,7 @@ function hasanjon() {
             "Content-Type": "application/json",
             "cache-control": "no-cache"
         },
-        "data": JSON.stringify({
+        "data": JSON.stringify({ 
             "chat_id": chat_id,
             "text": message
         })
